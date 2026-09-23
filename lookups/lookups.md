@@ -171,7 +171,7 @@ The `4` tells Excel to return the value from the **4th row** of the selected ran
 
 ---
 
-# 🔎 XLOOKUP vs. VLOOKUP
+# XLOOKUP vs. VLOOKUP
 
 ### VLOOKUP
 
