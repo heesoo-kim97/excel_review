@@ -203,4 +203,84 @@ Returns `TRUE` if either condition is satisfied.
 
 ---
 
+3. Conditional Aggregation
 
+These formulas are especially useful for business and data analysis.
+
+SUMIF
+
+Adds values that meet one condition.
+
+Example
+Region	Sales
+West	$500
+East	$700
+West	$300
+South	$900
+=SUMIF(A2:A5,"West",B2:B5)
+
+Result:
+
+$800
+
+Because:
+
+West → $500
+West → $300
+      ─────
+      $800
+SUMIFS
+
+Adds values that meet multiple conditions.
+
+Example
+=SUMIFS(
+C2:C100,
+A2:A100,"West",
+B2:B100,"Mac"
+)
+
+Meaning:
+
+Add Sales where Region = West AND Product = Mac.
+
+Mental model
+             SALES
+               ↑
+        ┌──────┴──────┐
+        │             │
+     Region          Product
+      = West          = Mac
+        │             │
+        └──────┬──────┘
+               ↓
+          SUM RESULTS
+COUNTIF
+
+Counts cells meeting one condition.
+
+=COUNTIF(A2:A100,"West")
+
+Example:
+
+West
+West
+East
+West
+South
+
+Result:
+
+3
+COUNTIFS
+
+Counts rows meeting multiple conditions.
+
+=COUNTIFS(
+A2:A100,"West",
+B2:B100,"Mac"
+)
+
+Meaning:
+
+Count transactions where Region = West AND Product = Mac.
